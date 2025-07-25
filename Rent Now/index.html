@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Now</title>
+    <style>
+        body{
+           
+            background-color: white;
+           
+        }
+        .content{
+        border:1px solid white;
+        width:700px;
+        margin-left:5px;
+        padding:2px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+        
+       }
+       .content{
+        height:600px;
+        margin-top:20px;
+        
+       }
+        .heading{
+            text-align:center;
+            /* margin-top: 10px; */
+            background-color:rgb(224, 65, 65);
+            color:white;
+            height:50px;
+            padding:3px;
+            margin-top:0px;
+            font-size:30px;
+            border-radius:7px;
+        }
+        form{
+            margin-left:100px;
+            font-size:20px;
+        }
+        input{
+            width:400px;
+            height:20px;
+        }
+        input[type="submit"]{
+            height:30px;
+            color:black;
+            font-weight: bolder;
+            background-color: rgb(4, 124, 4);
+            font-size: 15px;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover{
+            text-decoration: underline;
+        
+            cursor: pointer;
+        }
+        .conatiner{
+            display:flex;
+        }
+        .img{
+            margin:0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conatiner">
+        <div class="img">
+<img src="rent-now.jpg" width="650px" height="600px">
+
+        </div>
+
+    
+    <div class="content">
+        <h2 class="heading"><u> Rent Now</u> </h2>
+        <form>
+            <label for="fname">First name :</label><br>
+            <input type="text" id="fname" name="fname" required><br><br>
+            <label for="lname">Last name :</label><br>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="contact">Contact Number:</label><br>
+            <input type="number" id="contact" name="contact" required><br><br>
+            <label for="location">Pick up location :</label><br>
+            <input type="type" id="location" name="location" required><br><br>
+            <label for="date">Pick up date :</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+            <input type="submit" value="Submit" onclick="done()">
+        </form> 
+    </div>
+
+
+
+    </div>
+
+<script>
+    function done(){
+        var information = document.querySelectorAll('#fname, #lname, #email, #contact, #location,#date')
+        var isFormValid = true;
+        
+        information.forEach (function(input){
+            if (input.value.trim() === '') {
+                isFormValid = false;
+            }
+        })        
+        if (!isFormValid) {
+            alert("Please fill all the fields");
+        } else {
+            alert("Your Booking is Complete successfully");
+        }
+       
+    }
+</script>
+
+
+
+    
+</body>
+</html>
